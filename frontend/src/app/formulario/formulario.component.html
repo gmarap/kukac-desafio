@@ -1,0 +1,33 @@
+<div class="geral">
+  <form class="form-signin" (ngSubmit)="enviaFormulario(formulario)" method="POST" enctype="multipart/form-data">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Renda per capita</h1>
+    </div>
+    
+    <div class="form-label-group">
+      <input type="text" name="nome" [(ngModel)]="formulario.nome" id="inputNome" class="form-control" placeholder="Nome" autofocus>
+      <label for="inputNome">Nome</label>
+    </div>
+    
+    <div class="form-label-group">
+      <input type="text" [(ngModel)]="formulario.cep" name="cep" id="inputCEP" class="form-control" placeholder="CEP" required>
+      <label for="inputCEP">CEP</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="number" [(ngModel)]="formulario.renda" name="renda" id="inputRenda" class="form-control" placeholder="Renda Mensal" required>
+      <label for="inputRenda">Renda Mensal</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="number" [(ngModel)]="formulario.dependentes" name="dependentes" id="inputDependentes" class="form-control" placeholder="Número de Dependentes" required>
+      <label for="inputDependentes">Número de Dependentes</label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar dados</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>
+
+    <div class="alert alert-danger" *ngIf="mostraMensagem">{{ mensagem }}</div>
+
+  </form>
+</div>

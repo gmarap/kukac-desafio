@@ -1,0 +1,12 @@
+
+<div class="geral">
+  <main role="main" class="inner cover">
+    <div class="cov">
+      <h1 class="cover-heading">{{ dadosRecebidos.nome }}</h1>
+      <p class="lead">Residente na {{ dadosRecebidos.endereco.logradouro }}, {{ dadosRecebidos.endereco.bairro }}, {{ dadosRecebidos.endereco.cidade }}, {{ dadosRecebidos.endereco.estado }}, com renda per capita de  R${{ dadosRecebidos.renda }}.</p>
+      <p class="lead">
+        <a href="#" [routerLink]="['/index']" class="btn btn-lg btn-primary btn-block">Fazer outra consulta</a>
+      </p>
+    </div>
+  </main>
+</div>
